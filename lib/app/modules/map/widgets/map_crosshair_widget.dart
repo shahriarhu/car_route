@@ -1,4 +1,4 @@
-import 'package:car_route/app/modules/authentications/map/map_controller.dart';
+import 'package:car_route/app/modules/map/map_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

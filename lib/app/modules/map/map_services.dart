@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:car_route/app/core/apis/api_client.dart';
 import 'package:car_route/app/core/apis/api_endpoints.dart';
 import 'package:car_route/app/core/commons/models/route_response_model.dart';
@@ -39,10 +37,6 @@ class MapServices {
         },
       ),
     );
-
-    log('---------------------');
-    log(res.toString());
-    log('---------------------');
 
     if (res.statusCode == 200) {
       return RouteResponse.fromJson(res.data);

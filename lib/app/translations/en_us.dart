@@ -9,7 +9,4 @@ const Map<String, String> enUs = {
   "distanceWithValue": "Distance: @value",
   "etaWithValue": "ETA: @value",
   "pleaseYourConnection": "Please check your internet connection.",
-  // "language": "Language",
-  // "language": "Language",
-  // "language": "Language",
 };

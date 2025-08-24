@@ -1,10 +1,9 @@
-import 'package:car_route/app/modules/authentications/map/map_controller.dart';
+import 'package:car_route/app/modules/map/map_controller.dart';
 import 'package:car_route/app/ui/layouts/view_state_layout.dart';
-import 'package:car_route/app/ui/theme/colors.dart';
+import 'package:car_route/app/ui/widgets/loading_widgets/shimmer_box.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:shimmer/shimmer.dart';
 
 class GoogleMapWidget extends GetView<MapController> {
   const GoogleMapWidget({super.key});
@@ -45,14 +44,9 @@ class GoogleMapWidget extends GetView<MapController> {
   }
 
   _buildLoadingWidget() {
-    return Shimmer.fromColors(
-      baseColor: shimmerBaseLight,
-      highlightColor: shimmerHighlightLight,
-      child: Container(
-        width: double.infinity,
-        height: double.infinity,
-        color: shimmerBaseLight,
-      ),
+    return ShimmerBox(
+      width: double.infinity,
+      height: double.infinity,
     );
   }
 }

@@ -37,17 +37,13 @@ dependencies:
   get: ^4.7.2
   get_storage: ^2.1.1
   dio: ^5.9.0
-  connectivity_plus: ^6.1.5
   intl: ^0.20.2
-  cached_network_image: ^3.4.1
-  flutter_svg: ^2.2.0
   shimmer: ^3.0.0
   google_fonts: ^6.3.0
   google_maps_flutter: ^2.12.3
   geocoding: ^4.0.0
   flutter_polyline_points: ^3.0.1
   geolocator: ^14.0.2
-  shimmer_animation: ^2.2.2
 
 dev_dependencies:
   flutter_test:

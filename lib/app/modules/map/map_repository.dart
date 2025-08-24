@@ -1,5 +1,5 @@
 import 'package:car_route/app/core/commons/models/route_response_model.dart';
-import 'package:car_route/app/modules/authentications/map/map_services.dart';
+import 'package:car_route/app/modules/map/map_services.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class MapRepository {

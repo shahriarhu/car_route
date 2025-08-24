@@ -1,4 +1,4 @@
-import 'package:car_route/app/modules/authentications/map/map_repository.dart';
+import 'package:car_route/app/modules/map/map_repository.dart';
 import 'package:car_route/app/ui/layouts/view_state_layout.dart';
 import 'package:car_route/app/utils/asset_icons.dart';
 import 'package:car_route/app/utils/date_time_helper.dart';

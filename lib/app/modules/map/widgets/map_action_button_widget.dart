@@ -1,4 +1,4 @@
-import 'package:car_route/app/modules/authentications/map/map_controller.dart';
+import 'package:car_route/app/modules/map/map_controller.dart';
 import 'package:car_route/app/ui/widgets/buttons/main_button_widget.dart';
 import 'package:car_route/app/utils/ui_spacing.dart';
 import 'package:flutter/material.dart';
