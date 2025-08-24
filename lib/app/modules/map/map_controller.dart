@@ -123,7 +123,6 @@ class MapController extends GetxController {
   /// **************************
   /// CAMERA CONTROL
   /// **************************
-
   void onCameraMove(CameraPosition pos) => currentCenter.value = pos.target;
 
   void moveCenterTo(LatLng pos) async {
@@ -301,7 +300,7 @@ class MapController extends GetxController {
     destination.value = tmpPos;
     destinationName.value = tmpName;
 
-    // Update markers
+    /// Update markers
     if (origin.value != null) {
       _updateMarker(
         pos: origin.value!,
