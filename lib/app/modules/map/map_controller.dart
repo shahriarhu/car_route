@@ -53,6 +53,25 @@ class MapController extends GetxController {
   }
 
   /// **************************
+  /// LOCATION PERMISSION
+  /// **************************
+  Future<bool> _checkPermission() async {
+    mapDataState(DataState.loading);
+
+    LocationPermission permission = await Geolocator.checkPermission();
+    if (permission == LocationPermission.denied) {
+      permission = await Geolocator.requestPermission();
+    }
+    if (permission == LocationPermission.denied || permission == LocationPermission.deniedForever) {
+      Get.snackbar("Permission denied", "Location access is required.");
+    }
+
+    mapDataState(DataState.success);
+
+    return true;
+  }
+
+  /// **************************
   /// ICONS & MARKERS
   /// **************************
   Future<void> _loadIcons() async {
@@ -87,9 +106,6 @@ class MapController extends GetxController {
   /// **************************
   Future<void> moveToCurrentLocation() async {
     try {
-      final permission = await _checkPermission();
-      if (!permission) return;
-
       final position = await Geolocator.getCurrentPosition(
         locationSettings: const LocationSettings(
           accuracy: LocationAccuracy.high,
@@ -102,22 +118,6 @@ class MapController extends GetxController {
     } catch (e) {
       Get.snackbar("Error", "Unable to get location: $e");
     }
-  }
-
-  Future<bool> _checkPermission() async {
-    mapDataState(DataState.loading);
-
-    LocationPermission permission = await Geolocator.checkPermission();
-    if (permission == LocationPermission.denied) {
-      permission = await Geolocator.requestPermission();
-    }
-    if (permission == LocationPermission.denied || permission == LocationPermission.deniedForever) {
-      Get.snackbar("Permission denied", "Location access is required.");
-    }
-
-    mapDataState(DataState.success);
-
-    return true;
   }
 
   /// **************************
